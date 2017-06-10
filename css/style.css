@@ -1,0 +1,295 @@
+/* ----------------- CONTENT ------------------ */
+body {
+    overflow-x: hidden;
+}
+
+p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.content-wrapper {
+    height: 100%;
+    width: 100%;
+}
+.content-body {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+}
+.container{
+    padding-top:100px;
+    width:85%;
+}
+
+
+/* ----------------- MENU ------------------- */
+.menu-bar {
+    top:0;
+    left:0;
+    height:auto;
+    position: fixed;
+    background: #48cc9e;
+    opacity: 1;
+    color:white;
+    font-family: 'PT Sans', sans-serif;
+    z-index: 100;
+}
+.menu-bar h1 {
+    margin-left:15px;
+    margin-top: 15px;
+    font-size: 20pt;
+}
+
+
+/* ----------------- TOGGLE ----------------- */
+.toggle-wrapper {
+    padding-top: 10px;
+    padding-right: 3%;
+}
+.toggle-wrapper input {
+	height: 0;
+	width: 0;
+    visibility: hidden;
+
+}
+.toggle-wrapper label {
+    margin-top: 0;
+	cursor: pointer;
+	width: 60px;
+	height: 36px;
+	background: #ffffff;
+	display: inline-block;
+	border-radius: 10px;
+	position: relative;
+}
+.toggle-wrapper label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 15px;
+	height: 30px;
+	background: #48cc9e;
+	border-radius: 7px;
+	transition: ease 0.3s;
+    -webkit-transition: ease 0.3s;
+    -moz-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+}
+.toggle-wrapper .on, .toggle-wrapper .off {
+    position: absolute;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    top: 19px;
+    font-size: 13px;
+    transition: ease 0.3s;
+    -webkit-transition: ease 0.3s;
+    -moz-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+}
+.toggle-wrapper .on {
+    left:58%;
+    color: #48cc9e;
+    width: 22px;
+}
+.toggle-wrapper .off {
+    left: 0%;
+    color:transparent;
+    width: 22px;
+}
+.toggle-wrapper input:checked + label {
+	background: #ffffff;
+}
+.toggle-wrapper input:checked + label:after {
+	left: calc(100% - 3px);
+	transform: translateX(-100%);
+    -ms-transform: translate(-100%);
+    -webkit-transform: translate(-100%);
+}
+
+
+/* ----------------- CANVAS ----------------- */
+.canvas-wrapper {
+    height:auto;
+}
+.canvas-wrapper .canvas {
+    display: block;
+    margin-top:25px;
+    margin-left:50%;
+    border:8px solid #48cc9e;
+    border-radius: 20px;
+    cursor:crosshair;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+.canvas-wrapper .canvas:hover {
+    border:8px solid #7bd8b7;
+}
+.canvas-wrapper .button {
+    width:268px;
+    height:25px;
+    position: relative;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  
+}
+.canvas-wrapper #button {
+    padding:0;
+    padding-right: 12px;
+    height: 25px;
+    background: transparent;
+    color:#4cbc9e;
+    font-size: 12pt;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+    transform: translate3d(0,0,0);
+}
+.canvas-wrapper #button:hover {
+    cursor:pointer;
+    color:#77c6b1;
+}
+
+.canvas-wrapper .arrow-down {
+    width:268px;
+    height:25px;
+    position: relative;
+    left:50%;
+    display: none;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.canvas-wrapper #arrow {
+    position: absolute;
+    color:#4cbc9e;
+    left:50%;
+    top:50%;
+}
+
+/* --------------- NUMBER PAD --------------- */
+.label-div {
+    height:auto;
+}
+.label-pad {
+    margin-left:50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    margin-top: 15px;
+    height:300px;
+    width:220px;
+}
+.label-pad .label-wrapper {
+    display: inline-block;
+    padding-left: 1px;
+    padding-top:22px;
+    border: 2px solid #b9b9b9;
+    border-radius: 3px;
+    width:67px;
+    height: 67px;
+    margin-top:5px;
+    margin-left: 3px;
+    text-align: center;
+    -webkit-transition: ease 0.3s;
+    -moz-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s;
+}
+.label-pad .label-wrapper:hover {
+    box-shadow: 3px 3px 3px #d6d6d6;
+}
+.label-pad .label-wrapper .label {
+    color:#b9b9b9;
+    font-size:13pt;
+}
+
+
+/* --------------- PROGRESS BAR ----------------*/
+.progress-div {
+    height:auto;
+    padding-bottom: 20px;
+}
+.progress-wrapper {
+    width: 280px;
+    height:270px;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.progress-wrapper .progress-bar-vertical {
+    margin-top: 50px;
+    width: 10px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 16px;
+    float: left;
+    border:0;
+    box-shadow: 0 0 0;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.progress-wrapper .progress-bar-vertical .progress-bar {
+    width: 10px;
+    height: 0;
+    border: 0;
+    -webkit-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    transition: height 0.6s ease;
+}
+
+.bar-label-wrapper {
+    width: 280px;
+    height: 25px;
+    border-bottom: 3px solid #55cca3;
+    border-radius: 2px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.bar-label-wrapper .bar-label {
+    float: left;
+    margin-left: 16px;
+    width:10px;
+    text-align: center;
+    color:#b9b9b9;
+    font-size: 12pt;
+}
+
+
+/* ------------------- FOOTER -------------------*/
+.footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 80px;
+    background: #dedede;
+    padding: 10px;
+    color:#58c4a7;
+    text-align: center;
+    opacity: 0.8;
+}
+.footer i {
+    padding: 10px;
+    color:#4cbc9e;
+}
